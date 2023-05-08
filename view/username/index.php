@@ -16,6 +16,7 @@ $rows = $obj->index();
         <tr>
     <th scope="col">Id</th>
     <th scope="col">Nombre</th>
+    <th scope="col">Apellido</th>
     <th scope="col">Acciones</th>
 </tr>
     </thead>
@@ -25,7 +26,7 @@ $rows = $obj->index();
                 <tr>
                 <th><?= $row[0]  ?></th>
                 <th><?= $row[1]  ?></th>
-                <th>
+                <th><?= $row[2]  ?></th>
                 <th>
                     <a href="show.php?id=<?= $row[0]  ?>" class="btn btn-primary">ver</a> 
                     <a href="edit.php?id=<?= $row[0]  ?>" class="btn btn-warning">editar</a> 

@@ -3,7 +3,7 @@
     $obj = new usernameController();
 
     echo $_POST['nombre'];
-    $obj->guardar($_POST['nombre']);
+    $obj->guardar($_POST['nombre'],$_POST['apellido']);
     
 
 ?>

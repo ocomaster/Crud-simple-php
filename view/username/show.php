@@ -38,12 +38,14 @@
         <tr>
             <th scope="col">Id</th>
             <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
         </tr>
     </thead>
     <tbody>
         <tr>
             <td scope="col"><?= $date["id"]?></td>
             <td scope="col"><?= $date["nombre"]?></td>
+            <td scope="col"><?= $date["apellido"]?></td>
         </tr>
     </tbody>
 </table>

@@ -16,9 +16,15 @@
     </div>
   </div>
   <div class="mb-3 row">
-    <label for="inputPassword" class="col-sm-2 col-form-label">Nievo Nombre</label>
+    <label for="inputPassword" class="col-sm-2 col-form-label">Actualizar Nombre</label>
     <div class="col-sm-10">
       <input type="text" name="nombre" class="form-control" id="inputPassword" value="<?= $user[1] ?>">
+    </div>
+  </div>
+  <div class="mb-3 row">
+    <label for="inputPassword" class="col-sm-2 col-form-label">Actualizar Apellido</label>
+    <div class="col-sm-10">
+      <input type="text" name="apellido" class="form-control" id="inputPassword" value="<?= $user[2] ?>">
     </div>
   </div>
     <div>

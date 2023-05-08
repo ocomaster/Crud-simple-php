@@ -7,8 +7,8 @@
             require_once("c://xampp/htdocs/proyecto/model/usernameModel.php");
             $this->model = new usernameModel();
         }
-        public function guardar($nombre){
-           $id = $this->model->insertar($nombre);
+        public function guardar($nombre, $apellido){
+           $id = $this->model->insertar($nombre,$apellido);
            return ($id!=false) ? header("Location:show.php?id=".$id) : header("Location:create.php");
         }
 
@@ -20,8 +20,8 @@
             return ($this->model->index()) ? $this->model->index() : false ;
         }
 
-        public function update($id, $nombre){
-            return ($this->model->update($id, $nombre) != false) ? header("Location:show.php?id=".$id) : header("Location:index.php");
+        public function update($id, $nombre, $apellido){
+            return ($this->model->update($id, $nombre, $apellido) != false) ? header("Location:show.php?id=".$id) : header("Location:index.php");
         }
 
         public function delete($id){

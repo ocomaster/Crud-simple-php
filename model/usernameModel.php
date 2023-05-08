@@ -10,9 +10,10 @@
         }
 
 
-        public function insertar($nombre){
-            $stament = $this->PDO->prepare("INSERT INTO username VALUES(null,:nombre)");
+        public function insertar($nombre, $apellido){
+            $stament = $this->PDO->prepare("INSERT INTO username VALUES(null,:nombre,:apellido)");
             $stament->bindParam(":nombre", $nombre);
+            $stament->bindParam(":apellido", $apellido);
             return ($stament->execute()) ? $this->PDO->lastInsertId() : false;
         }
         public function show($id){
@@ -26,9 +27,10 @@
             return ($stament->execute()) ? $stament->fetchAll() : false;
         }
 
-        public function update($id, $nombre){
-            $stament = $this->PDO->prepare("UPDATE username SET nombre = :nombre WHERE id = :id");
+        public function update($id, $nombre, $apellido){
+            $stament = $this->PDO->prepare("UPDATE username SET nombre = :nombre, apellido = :apellido WHERE id = :id");
             $stament->bindParam(":nombre",$nombre);
+            $stament->bindParam(":apellido",$apellido);
             $stament->bindParam(":id",$id);
             return ($stament->execute()) ? $id : false ;
         }
